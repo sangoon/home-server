@@ -1,3 +1,6 @@
 users
   - name: sangoon
-  coreos-ssh-import-github: sangoon
+    groups:
+      - sudo
+      - docker
+    coreos-ssh-import-github: sangoon
