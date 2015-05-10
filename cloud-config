@@ -1,0 +1,3 @@
+users
+  - name: sangoon
+  coreos-ssh-import-github: sangoon
