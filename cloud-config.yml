@@ -1,7 +1,30 @@
 #cloud-config
 
+hostname: sangoon-coreos
+
+coreos:
+  etcd:
+    addr: $private_ipv4:4001
+    peer-addr: $private_ipv4:7001
+  units:
+    - name: etcd.service
+      command: start
+    - name: fleet.service
+      command: start
+    - name: static.network
+      content: |
+        [Match]
+        Name=eth0
+
+        [Network]
+        Address=89.2.166.114/24
+        Gateway=89.2.166.1
+        DNS=89.2.0.1
+        DNS=89.2.0.1
+        DNS=8.8.8.8
+
 users:
-  - name: sangoon
+  - name: core
     groups:
       - sudo
       - docker
