@@ -1,0 +1,8 @@
+#cloud-config
+
+users:
+  - name: sangoon
+    groups:
+      - sudo
+      - docker
+    coreos-ssh-import-github: sangoon
