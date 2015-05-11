@@ -7,4 +7,6 @@ RUN mkdir /datas
 
 ADD minidlna.conf /etc/minidlna.conf
 
-RUN minidlnad -R
+EXPOSE 1900/udp
+
+CMD minidlnad -R
