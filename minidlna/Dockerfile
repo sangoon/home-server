@@ -9,4 +9,4 @@ ADD minidlna.conf /etc/minidlna.conf
 
 EXPOSE 1900/udp
 
-CMD minidlnad -R
+CMD /bin/bash;service minidlna start
