@@ -1,6 +1,6 @@
 FROM debian:latest
 
-RUN sudo su -root && apt-add-repository ppa:x2go/stable -qy
+RUN  apt-get install software-properties-common -qy && apt-add-repository ppa:x2go/stable -qy
 RUN apt-get update -qy
 RUN apt-get install x2goserver x2goserver-xsession -qy
 RUN apt-get install x2golxdebindings -qy
