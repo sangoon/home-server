@@ -10,7 +10,7 @@ ADD spotify-connect-web.sh /usr/src/connect/spotify-connect-web.sh
 WORKDIR /usr/src/connect
 RUN chmod u+x spotify-connect-web.sh
 RUN bash spotify-connect-web.sh install
-ADD spotify_appkey.key
+ADD spotify_appkey.key /usr/src/connect/spotify_appkey.key
 RUN MKDIR spotify-connect-web-chroot/usr/src/app/
 RUN cp spotify_appkey.key spotify-connect-web-chroot/usr/src/app/
 RUN bash spotify-connect-web.sh --username 12345678 --password xyz123 --bitrate 320
