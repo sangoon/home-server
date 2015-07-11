@@ -4,6 +4,7 @@ RUN apt-get update
 
 RUN apt-get -y install python-pip python-dev libffi-dev libasound2-dev python-alsaaudio python-gevent
 RUN apt-get -y install alsa-utils
+RUN apt-get -y install curl
 
 RUN curl -O http://spotify-connect-web.s3-website.eu-central-1.amazonaws.com/spotify-connect-web.sh
 RUN chmod u+x spotify-connect-web.sh
