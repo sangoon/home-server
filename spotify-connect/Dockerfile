@@ -11,6 +11,7 @@ WORKDIR /usr/src/connect
 RUN chmod u+x spotify-connect-web.sh
 RUN bash spotify-connect-web.sh install
 ADD spotify_appkey.key /usr/src/connect/spotify_appkey.key
+RUN mkdir spotify-connect-web-chroot
 RUN mkdir spotify-connect-web-chroot/usr
 RUN mkdir spotify-connect-web-chroot/usr/src
 RUN mkdir spotify-connect-web-chroot/usr/src/app/
