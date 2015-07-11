@@ -13,3 +13,4 @@ RUN bash spotify-connect-web.sh install
 
 ENTRYPOINT ["python", "main.py"]
 EXPOSE 4000
+CMD /bin/bash
