@@ -8,9 +8,9 @@ RUN apt-get -y install curl
 
 RUN curl -O http://spotify-connect-web.s3-website.eu-central-1.amazonaws.com/spotify-connect-web.sh
 RUN chmod u+x spotify-connect-web.sh
-RUN ./spotify-connect-web.sh install
+RUN bash spotify-connect-web.sh install
 RUN sudo cp spotify_appkey.key spotify-connect-web-chroot/usr/src/app/
-RUN ./spotify-connect-web.sh --username 12345678 --password xyz123 --bitrate 320
+RUN bash spotify-connect-web.sh --username 12345678 --password xyz123 --bitrate 320
 
 ADD requirements.txt /usr/src/app/requirements.txt
 WORKDIR /usr/src/app

@@ -1,0 +1,11 @@
+username=docker
+encoding=
+ssh_port=49155
+speed=0
+min-speed=0
+host=192.168.0.22
+min-quality=30
+mode=ssh
+password=iephit5aeMei
+quality=0
+port=
