@@ -6,7 +6,7 @@ RUN apt-get -y install python-pip python-dev libffi-dev libasound2-dev python-al
 RUN apt-get -y install alsa-utils
 RUN apt-get -y install curl
 
-RUN curl -O http://spotify-connect-web.s3-website.eu-central-1.amazonaws.com/spotify-connect-web.sh
+ADD spotify-connect-web.sh
 RUN chmod u+x spotify-connect-web.sh
 RUN bash spotify-connect-web.sh install
 RUN cp spotify_appkey.key spotify-connect-web-chroot/usr/src/app/
