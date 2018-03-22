@@ -1,0 +1,29 @@
+version: "3.2"
+services:
+  web:
+    container_name: web
+    image: node:latest
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "8081"
+    ports:
+      - "8081:3009"
+    command: "/home/node/app/entrypoint.sh"
+  redis:
+    container_name: redis
+    image: "redis:alpine"
+    volumes:
+      - redis_data:/data
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    volumes:
+      - mongo_data:/data/db
+volumes:
+  redis_data:
+  mongo_data:

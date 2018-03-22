@@ -1,0 +1,37 @@
+{
+  "name": "fr.sangoon.www",
+  "version": "0.0.1",
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "node": "true",
+      "es6": "true"
+    }
+  },
+  "description": "home",
+  "main": "server.js",
+  "repository": "https://github.com/sangoon/home-server.git",
+  "author": "sangoon <snkorp@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
+    "boom": "^7.1.1",
+    "catbox-redis": "^4.0.0",
+    "config": "^1.28.1",
+    "crumb": "^7.0.0",
+    "glob": "^7.1.2",
+    "glue": "^5.0.0",
+    "hapi": "^17.2.3",
+    "joi": "^13.0.2",
+    "mongoose": "^4.13.7",
+    "nunjucks": "^3.0.1",
+    "vision": "^5.3.0",
+    "yar": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
